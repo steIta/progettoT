@@ -1,0 +1,43 @@
+.md-button {
+  padding: 0 6px 0 6px;
+  margin: 6px 8px 6px 8px;
+  min-width: 88px;
+  border-radius: 3px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration:none;
+  border: none;
+  outline: none;
+}
+.box box-primary{
+  margin-top:100px;
+  padding:80px;
+}
+
+.input-group-addon{
+  size:14px;
+}
+
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+.css-form input.ng-valid.ng-touched {
+    background-color: #78FA85;
+  }
+#mainselection select {
+   border: 0;
+   color:blue;
+   background-color:#DADADA;
+   border-radius: 5px;
+   font-size: 14px;
+   padding: 7px 10px;
+   width: 378px;
+   *width: 350px;
+   *background: #58B14C;
+   -webkit-appearance: none;
+}
+#conferma{
+  margin-left:160px
+}
