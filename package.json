@@ -1,0 +1,42 @@
+{
+  "name": "progettoautenticazione",
+  "version": "0.0.1",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.7.0",
+    "bower": "^2.15.9",
+    "cookie-parser": "^1.4.3",
+    "date-and-time": "^0.4.0",
+    "ejs": "^1.0.0",
+    "express": "^4.8.7",
+    "express-session": "^1.7.6",
+    "factory": "^1.0.3",
+    "mongodb": "^2.15.9",
+    "mongoose": "^2.15.9",
+    "morgan": "^1.7.0",
+    "mssql": "^2.15.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-csso": "^2.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.1.0",
+    "gulp-jshint": "^2.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
