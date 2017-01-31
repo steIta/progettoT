@@ -1,0 +1,10 @@
+{
+    "port":7000,
+     "db": {
+        "server": "192.168.120.55",
+        "database": "AWSRL",
+        "user": "sa",
+        "password": "Autoware99"
+      }
+    
+}
