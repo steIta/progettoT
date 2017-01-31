@@ -1,0 +1,54 @@
+<section class="content-header">
+    <div class="box box-primary" ng-controller="ticketCtrl">
+        <div class="box-header with-border">
+            <h3 class="box-title">Apertura ticket</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="ticketsubmission" class="row">
+                        <div class='col-md-12 form-vert-space form-horizontal' role="form">
+                            <div id="cate">
+                                <div class='form-group' id='content'>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <label for='categoria' class='col-sm-3 control-label'>Categoria<span style="color: red">*</span></label>
+                                    <div id="mainselection" class='col-sm-9'>
+                                        <!--<select id="seleziona" name="seleziona" ng-model="paginaCorrente" ng-change="go(pagineCorrente)">-->
+                                        <select class="selectpicker show-tick" name="select" ng-model="currentState" ng-options="state as state for state in states"
+                                        data-style="btn-info">
+                                        </select>
+                                        <!-- <option selected="selected" value="0">- Scegli una -</option>
+                                                <option value="1">Spedizione</label>
+                                                <option value="2">cambio login</option>
+                                                <option value="3">cambio password</option>-->
+                                        <div class='help'>Selezionando il reparto giusto ti permetterà di risolvere il problema più velocemente.</div>
+                                    </div>
+                                </div>
+                                <div id="conferma">
+                                    <div class="form-group">
+                                        <label for='conferma' class='col-sm-3 control-label'></label>
+                                        <div class="col-sm-9"><br><br><br><br><br>
+                                            <button type="submit" class="btn btn-info" ng-click="conferma()">Inizia<span class="glyphicon glyphicon-send"></span></button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+
+    <!-- box-footer -->
+    </div>
+    <!-- /.box -->
+    </div>
+</section>

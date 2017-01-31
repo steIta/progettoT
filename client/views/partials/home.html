@@ -1,0 +1,81 @@
+
+
+<section class="content">
+  <div class="callout callout-info" ng-controller="homeCtrl">
+    <h3>Ciao {{credentials.username}}! benvenuto nel portale assistenza</h3>
+  </div class="container"><br>
+ <h4>Assistenza</h4>
+ <p class= "text-primary">richiedi assistenza</p>
+<p class="text-justify">
+  Non ricevi messaggi nella posta elettronica?<br>
+  Non visualizzi icone e dati del tuo pannello di controllo?<br>
+  Problemi con un ordine?<br>
+  <br>
+  <br>
+  Contattaci attraverso un ticket, cliccando la voce richiesta da menu
+</p>
+  <div><label>
+  </div>
+  <!-- Default box -->
+  <div class="box">
+    <div class="box-header with-border">
+      <h3 class="box-title">I tuoi ticket</h3>
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fa fa-minus"></i></button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+              <i class="fa fa-times"></i></button>
+      </div>
+    </div>
+    <div class="box-body">
+      <section class="content">
+        <div class="row">
+          <div class="box box-primary">
+         <!--   <div class="box-header with-border">-->
+            <!-- /.box-header -->
+         
+              <table id="mytable" class="table table-responsive table table-striped">
+              
+                  <tr class="info">
+                    <th>id</th>
+                    <th>username</th>
+                    <th>categoria</th>
+                    <th style="width:150px;">ora inserimento</th>
+                    <th>ora risposta</th>
+                    <th>messaggio</th>
+                    <th>status</th>
+                    <th>risposta</th>
+                  </tr>
+                </thead>
+                <tr ng-repeat="x in dati">
+                  <td>{{x.id}}</td>
+                  <td>{{x.username}}</td>
+                  <td>{{x.categoria}}</td>
+                  <td>{{x.createDate}}</td>
+                  <td>{{x.datanuova}}</td>
+                  <td>{{x.messaggio}}</td>
+                  <td>
+                    <span ng-if="x.idstatus==1" class='label label-danger'>{{x.status}}</span>
+                    <span ng-if="x.idstatus==2" class='label label-warning'>{{x.status}}</span>
+                    <span ng-if="x.idstatus==3" class='label label-success'>{{x.status}}</span> </td>
+                  <!--  <td><span class="label {{x.idstatus==1?'label-danger':'label-success'}}">{{x.status}}</span></td>-->
+                  <td>{{x.risposta}}</td>
+                </tr>
+              </table>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="/#/ticket">1</a></li>
+                <li><a href="/#/ticket">2</a></li>
+                <li><a href="/#/ticket">3</a></li>
+                <li><a href="/#/ticket">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.box -->
+      
+        <!-- /.box-body -->
+      </section>
+      <!-- /.content -->

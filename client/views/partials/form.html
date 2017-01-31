@@ -1,0 +1,85 @@
+<section class="content">
+  <div class="row">
+    <!-- left column -->
+    <div class='col-md-8' ng-controller="richiestaCtrl">
+      <!-- general form elements -->
+      <div class="box box-primary">
+        <div class="box-header with-border">
+        </div>
+        <!-- /.box-header -->
+
+
+        <form role="form"  class="css-form" name="myForm" novalidate>
+          <fieldset>
+            <div class="box-body">
+              <div class="form-group">
+                <label for="richiesta">Richiesta di &nbsp; &nbsp;<span class="label label-info"> {{credentials.username}}</span></label>
+                <hr/> <label for="ordine">Numero ordine</label>
+                <input type="text" class="form-control" id="ordine" name="numerordine" ng-model="id" required>
+                <span style="color:red" ng-show=" myForm.numerordine.$touched && myForm.numerordine.$invalid">
+                  Numero richiesto
+                </span>
+              </div>
+              <div class="form-group">
+                <label for="categoria">Categoria</label>
+                <form>
+                <select name="select" id="combobox" ng-model="categoria" class=" form-control" required>
+                  
+                <option selected="selected" value="0">- Spedizione -</option>
+                <option value ="italiana">italiana</option>
+                <option value="internazionale">internazionale</option>
+                 </select>
+                </form>
+              </div>
+              <div class="form-group">
+                <label for="tipo">Tipo richiesta</label>
+                <form >
+                <select data-style="btn-info" name="combo" id="combobox" ng-model="scelta" class=" form-control" required>
+                <option selected="selected" value="0"> - Scegli una -</option>
+                <option value="1">dove si trova l'ordine</option>
+                <option value="2">resi</option>
+                <option value="3">modifica ordine</option>
+                <option value="4">visualizza fattura</option>
+                <option value="5">pagamenti</option>
+              </select>
+                </form>
+              </div>
+              <div class="form-group">
+                <label for="contatto">e-mail</label>
+                <div class="col-md-13 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input name="email" placeholder="e-mail" class="form-control" ng-model="contatto" type="email" required>
+                    
+                  </div>
+                  <span style="color:red" ng-show=" myForm.email.$touched && myForm.email.$invalid">email richiesta</span>
+                </div>
+              </div>
+              <div class="form-group">
+
+                <label for="area">Messaggio</label>
+                <div class="col-md-13 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <textarea class="form-control" name="comment" placeholder="Messaggio" ng-model="messaggio" required></textarea>
+                  </div>
+                </div>
+                <hr/>
+               
+                <div class="box-footer">
+                  <div class="form-group">
+                   <div class="col-md-20">
+                      <button type="submit" class="btn btn-info" ng-click="inoltra()" >Invia<span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+      </div>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- /.box -->
