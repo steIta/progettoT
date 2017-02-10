@@ -1,7 +1,7 @@
 var express = require('express');
 var session = require('express-session');
 var app = express();
-var sql = require('mssql');
+
 var config = require('./config');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
