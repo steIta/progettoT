@@ -3,7 +3,7 @@ var session = require('express-session');
 var app = express();
 
 var config = require('./config');
-var morgan = require('morgan');
+
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var auth = require('./server/auth');
@@ -16,7 +16,7 @@ var MongoClient = require('mongodb').MongoClient
     , assert = require('assert');
 var url = 'mongodb://localhost:27017/utenti';
 var dbInstance = {}
-var moment=require('moment');
+
 
 
 
@@ -27,7 +27,7 @@ mongoose.connection.on('open', function () {
 */
 
 
-app.use(morgan('dev'));
+app.use(express.logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(session({ secret: "secret", saveUninitialized: true, resave: true }));
@@ -37,7 +37,7 @@ app.use(auth.checklogin);
 
 
 app.use('/theme', express.static('client/theme'));
-
+app.use('/node_modules', express.static('node_modules'));
 app.set('port', config.port);
 
 global.dirClient = __dirname + '/client';
